@@ -1,0 +1,96 @@
+site_name: Anti-ADHD
+site_description: 아이젠하워 매트릭스로 ADHD를 이기는 할 일 관리 프로그램
+site_author: octxxiii
+site_url: https://octxxiii.github.io/Anti-ADHD/
+
+repo_name: octxxiii/Anti-ADHD
+repo_url: https://github.com/octxxiii/Anti-ADHD
+
+theme:
+  name: material
+  language: ko
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - navigation.top
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - header.autohide
+  palette:
+    - scheme: default
+      primary: white
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: 다크 모드로 전환
+    - scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 라이트 모드로 전환
+  font:
+    text: Noto Sans KR
+    code: JetBrains Mono
+  icon:
+    repo: fontawesome/brands/github
+  favicon: images/favicon.ico
+  logo: images/logo.png
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/octxxiii/Anti-ADHD
+      name: GitHub
+    - icon: fontawesome/solid/envelope
+      link: mailto:kdyw123@gmail.com
+  version:
+    provider: mike
+
+plugins:
+  - search:
+      lang: ko
+      separator: '[\s\-\.]+'
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      linenums: true
+      auto_title: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - tables
+  - footnotes
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+nav:
+  - 홈: index.md
+  - 시작하기: user-guide.md
+  - 자주 묻는 질문: faq.md
+  - 문제 해결: troubleshooting.md 
